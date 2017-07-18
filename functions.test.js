@@ -21,14 +21,14 @@ describe('Testando conversoes para a base 10', () =>{
 describe('Testando conversoes da base 10 para outras bases', () =>{
 
     test('Covertendo para binário', () => {
-      expect(Number(convertFrom10(10,2))).toBe('1010');
+      expect(Number(convertFrom10(10,2))).toBe(1010);
     });
 
-    test('Covertendo da base 8 para base 10', () => {
-      expect(Number(convertTo10(10,8))).toBe(12);
+    test('Covertendo para base 8', () => {
+      expect(Number(convertFrom10(10,8))).toBe(12);
     });
 
-    test('Covertendo base 10 para binário', () => {
-      expect(convertTo10(10,16)).toBe('A');
+    test('Covertendo para a base 16', () => {
+      expect(convertFrom10(10,16)).toBe('A');
     });
 });
