@@ -2,7 +2,7 @@
 function verifyNumber(array,baseIn){
 	var i;
 
-	if(number == ""){
+	if(array == ' '){
 		return (-1);
 	}
 
