@@ -3,31 +3,62 @@
 <head>
 	<title>Conversor de bases</title>
 	<meta charset="utf-8">
-	<script type="text/javascript" src="bundle.js"></script>
+	<!-- Loading Bootstrap -->
+	<link href="dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Loading Flat UI Pro -->
+	<link href="dist/css/flat-ui-pro.css" rel="stylesheet">
+	<style media="screen">
+		h5 {
+			display: inline-block;
+		}
+	</style>
 </head>
 <body>
-
-	<form name="conversor">
+	<div class="container">
 		<h1>Conversor de bases</h1>
-		<p id="paragraph">Número: <input type="text" name="number" id="number"></p>
-		Base:
-		<select id="baseIn">
-			<option value="10" selected>10</option>
-			<option value="2">2</option>
-			<option value="8">8</option>
-			<option value="16">16</option>
-		</select>
-		Para:
-		<select id="baseOut">
-			<option value="2" selected>2</option>
-			<option value="8">8</option>
-			<option value="10">10</option>
-			<option value="16">16</option>
-		</select>
-		<button type="button" name="submit" onclick="Convert()">Converter</button>
-	</form>
-	<p id="result">
-		Resultado:
-	</p>
+		<form class="form-horizontal">
+			<div class="form-group">
+		    <label for="inputEmail3" class="col-sm-2 control-label">Número</label>
+		    <div class="col-sm-10">
+					<input type="text"  class="form-control" name="number" id="number">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputEmail3" class="col-sm-2 control-label">Base</label>
+		    <div class="col-sm-10">
+					<select id="baseIn" class="form-control">
+						<option value="10" selected>10</option>
+						<option value="2">2</option>
+						<option value="8">8</option>
+						<option value="16">16</option>
+					</select>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputPassword3" class="col-sm-2 control-label">Para</label>
+		    <div class="col-sm-10">
+					<select id="baseOut" class="form-control">
+						<option value="2" selected>2</option>
+						<option value="8">8</option>
+						<option value="10">10</option>
+						<option value="16">16</option>
+					</select>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <button type="button" onclick="Convert()" class="btn btn-default">Converter</button>
+		    </div>
+		  </div>
+		</form>
+		<p id="result"></p>
+	</div>
+	<!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+	<script src="dist/js/vendor/jquery.min.js"></script>
+	<script src="dist/js/vendor/video.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="dist/js/flat-ui-pro.js"></script>
+	<script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>

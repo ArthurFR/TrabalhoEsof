@@ -95,20 +95,20 @@ window.Convert = function(){
 	var result;
 
 	if(verifyNumber(array,baseIn) != 1){
-		document.getElementById('result').innerHTML = "Número Inválido";
+		document.getElementById('result').innerHTML = "<p class='bg-warning' style='padding: 20px;'>Número Inválido</p>";
 		return false;
 	}
 	if(baseIn == baseOut){
-		document.getElementById('result').innerHTML = "Resultado: " + number;
+		document.getElementById('result').innerHTML = "<h5>Resultado: </h5> " + number;
 		return true;
 	}
 
 	result = convertTo10(number,baseIn);
 
 	if(baseOut == 10){
-		document.getElementById('result').innerHTML = "Resultado: " + result;
+		document.getElementById('result').innerHTML = "<h5>Resultado: </h5> " + result;
 	}else{
-		document.getElementById('result').innerHTML = "Resultado: " + convertFrom10(result,baseOut);
+		document.getElementById('result').innerHTML = "<h5>Resultado: </h5> " + convertFrom10(result,baseOut);
 	}
 	return true;
 
